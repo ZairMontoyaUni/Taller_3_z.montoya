@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Map;
 
 import uniandes.dpoo.aerolinea.exceptions.InformacionInconsistenteException;
@@ -164,6 +165,14 @@ public class Aerolinea
     public Vuelo getVuelo( String codigoRuta, String fechaVuelo )
     {
         // TODO implementar
+    	ListIterator<Vuelo> listavuelo = vuelos.listIterator();
+    	
+    	while (listavuelo.hasNext()) {
+    	    Vuelo vuelo = listavuelo.next();
+    	    // Aquí puedes trabajar con el objeto 'vuelo'
+    	    System.out.println(vuelo); // Por ejemplo, imprimir el vuelo
+    	}		
+    	
         return null;
     }
 

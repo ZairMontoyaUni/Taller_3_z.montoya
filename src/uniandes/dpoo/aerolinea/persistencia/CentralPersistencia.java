@@ -24,9 +24,15 @@ public class CentralPersistencia
      * @return El objeto que debería usarse para cargar y salvar la información
      * @throws TipoInvalidoException Se lanza esta excepción si se utiliza un tipo de archivo que no es válido
      */
-    public static IPersistenciaAerolinea getPersistenciaAerolinea( String tipoArchivo ) throws TipoInvalidoException
-    {
-        // TODO implementar
+    public static IPersistenciaAerolinea getPersistenciaAerolinea(String tipoArchivo) throws TipoInvalidoException {
+        switch (tipoArchivo) {
+            case JSON:
+                return new PersistenciaAerolineaJson();
+            case PLAIN:
+                return new PersistenciaAerolineaPlaintext();
+            default:
+                throw new TipoInvalidoException("Tipo de archivo no válido: " + tipoArchivo);
+        }
     }
 
     /**
