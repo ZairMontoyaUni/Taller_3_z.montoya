@@ -7,8 +7,8 @@ import org.json.JSONObject;
  */
 public class ClienteCorporativo extends Cliente
 {
-    // TODO completar
-    public final String CORPORATIVO = "Corporativo";
+   
+    public final String CORPORATIVO = "CORPORATIVO";
     public final int GRANDE=1;
 	public final int MEDIANA=2;
 	public final int PEQUENA=3;
